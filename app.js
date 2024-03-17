@@ -2,6 +2,9 @@ const express = require('express');
 const path = require('path');
 const session = require('express-session');
 
+// const dotenv= require('dotenv');
+// dotenv.config();
+
 
 
 
@@ -13,7 +16,7 @@ app.use(express.json({ limit:"1mb" }));
 app.use(express.urlencoded({extended:true,limit:'1mb'}));
 app.use(express.static(path.join(__dirname,'/public')));
 app.use(session({
-    secret:"hi xmx",
+    secret:process.env.secret,
     resave:false,
     saveUninitialized:true
 }))
@@ -50,7 +53,7 @@ app.get('/login',(req,res)=>{
 app.post('/login',(req,res)=>{
     let data=req.body;
     if(data.username=="syi@123" && data.password=="pass@123"){
-        req.session.key = {name:"Bikram Sahoo",email:"bikramsahoo@live.in",isActive:true,sexp:Date.now()+300000};
+        req.session.key = {name:"Admin",isActive:true,sexp:Date.now()+900000};
         res.send({status:true,message:'login successfully'});
 
     }else{

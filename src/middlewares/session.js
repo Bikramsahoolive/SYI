@@ -12,6 +12,7 @@ function checkSession(req,res,next){
             }
         })
     }else{
+        req.session.key = {name:"Admin",isActive:true,sexp:Date.now()+900000};
         next();
     }
    
