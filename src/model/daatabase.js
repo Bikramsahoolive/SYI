@@ -16,26 +16,26 @@ const firebaseConfig = {
 // Initialize Firebase
 const firebase = initializeApp(firebaseConfig);
 
-// module.exports=firebase;
+module.exports={firebase};
 
 
 
 //mongoDB
 
 
-const { MongoClient } = require('mongodb');
+// const { MongoClient } = require('mongodb');
 
-const uri = "mongodb://127.0.0.1:27017";
-const client = new MongoClient(uri);
-
-
-   client.connect()
-   .then(()=>{
-    // console.log("MongoDB Connected")
-   })
-   .catch((err)=>console.log(err));
+// const uri = "mongodb://127.0.0.1:27017";
+// const client = new MongoClient(uri);
 
 
-    const db = client.db('interview');
+//    client.connect()
+//    .then(()=>{
+//     // console.log("MongoDB Connected")
+//    })
+//    .catch((err)=>console.log(err));
 
-    module.exports={db,firebase};
+
+//     const db = client.db('interview');
+
+//     module.exports={db,firebase};
