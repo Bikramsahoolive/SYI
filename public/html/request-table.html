@@ -104,7 +104,7 @@
         <footer>
         <div class="footer">
         <section>
-        <p><img src="img/logo.png" alt="Schedule Your Interview"></p>
+        <p><img src="../images/LOGO.jpg" alt="Schedule Your Interview"></p>
         <p> <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p></p>
@@ -120,7 +120,7 @@
         
         <section>
         <p class="title">SHORT CUT</p>
-        <p><a href="https://codepen.io/MAHESHBYL/details/mdOmWZG">Contact Us</a></p>
+        <p><a href="#">Contact Us</a></p>
         <p><a href="#">Services</a></p>
         <p><a href="#">About Us</a></p>
         <p><a href="#">Our Fields</a></p>
@@ -152,7 +152,11 @@
 
 
       let subject = "SYI Interview scheduled!!!";
-          // let message = ``
+      let date =new Date();
+      let year = date.getFullYear();
+      let month = (date.getMonth()+1).toString().padStart(2,"0");
+      let day = date.getDate();
+      let curentDate = `${day}/${month}/${year}`;
 
 
         let trow = document.createElement("tr");
@@ -171,7 +175,7 @@
         td6.setAttribute("data-th","Action");
 
         td1.innerHTML = name;
-        td2.innerHTML = `<a href="mailto:${email}?subject=${subject}&body=Your Interview is held on Date :________, Thank You for your Registration.">${email}</a>`;
+        td2.innerHTML = `<a href="mailto:${email}?subject=${subject}&body=Your Interview is held on Date : ${curentDate}, Thank You for your Registration.">${email}</a>`;
         td3.innerHTML = `<a href="https://syi-meet.onrender.com/connect/${phone}">${phone}</a>`;
         td4.innerHTML = gender;
         td5.innerHTML = type;

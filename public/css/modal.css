@@ -33,7 +33,7 @@
 
   .modal-open{
     transition: top 0.5s;
-    top: 30%;
+    top: 20%;
   }
 
   .modal-content h3{
@@ -63,6 +63,10 @@
     .modal-content{
         width: 75%;
         height: 50%;
+    }
+    .modal-open{
+      transition: top 0.5s;
+      top: 10%;
     }
     
   }

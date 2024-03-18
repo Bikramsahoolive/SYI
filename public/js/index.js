@@ -354,6 +354,9 @@ function loginUser(){
       },500);
 
     }else if(res.status){
+      username.value="";
+      password.value="";
+      document.querySelector('.modal').style.display='none';
       window.location.href="/reg-data";
     }
   })
