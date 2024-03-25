@@ -2,15 +2,8 @@ const {firebase} =require('../model/daatabase');
 const {getFirestore,collection,addDoc,getDocs,deleteDoc,doc } = require('firebase/firestore');
 const db = getFirestore(firebase);
 
-
-//firebase
-
 async function receiveData(req,res){
     let data = req.body;
-    if (data.phone=="9776999202"){
-      res.send({status:false,message:"Restricted Phone no."});
-      return;
-    }
   // console.log(data);
   try {
     const docRef = await addDoc(collection(db,"applicants"), data);

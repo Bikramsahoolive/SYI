@@ -17,25 +17,3 @@ const firebaseConfig = {
 const firebase = initializeApp(firebaseConfig);
 
 module.exports={firebase};
-
-
-
-//mongoDB
-
-
-// const { MongoClient } = require('mongodb');
-
-// const uri = "mongodb://127.0.0.1:27017";
-// const client = new MongoClient(uri);
-
-
-//    client.connect()
-//    .then(()=>{
-//     // console.log("MongoDB Connected")
-//    })
-//    .catch((err)=>console.log(err));
-
-
-//     const db = client.db('interview');
-
-//     module.exports={db,firebase};
